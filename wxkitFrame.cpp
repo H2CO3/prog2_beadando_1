@@ -155,8 +155,8 @@ wxkitFrame::wxkitFrame(wxWindow *parent, wxWindowID ID):
 		long idx1 = productList->GetNextItem(-1, wxLIST_NEXT_BELOW, wxLIST_STATE_SELECTED);
 		long idx2 = productList->GetNextItem(idx1, wxLIST_NEXT_BELOW, wxLIST_STATE_SELECTED);
 
-		const auto &p = displayedProducts[idx1];
-		const auto &q = displayedProducts[idx2];
+		auto p = displayedProducts[idx1];
+		auto q = displayedProducts[idx2];
 
 		db.makeProductsCompatible(p, q);
 		this->reloadProductList();
